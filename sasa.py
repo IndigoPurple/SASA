@@ -1,10 +1,5 @@
-import numpy as np
-
 from sasa_utils import *
 from sasa_rec import (GAP_TV_rec, ADMM_TV_rec)
-
-import torch
-from packages.ffdnet.models import FFDNet
 
 det_num = 30
 
@@ -27,27 +22,6 @@ sigma = [60 / 255 * pow(0.971, k - 1) for k in iter_max0]  # pre-set noise stand
 # sigma    = [12/255, 6/255] # pre-set noise standard deviation
 # iter_max = [10,10] # maximum number of iterations
 useGPU = True  # use GPU
-
-# pre-load the model for FFDNet image denoising
-in_ch = 1
-model_fn = 'packages/ffdnet/models/net_gray.pth'
-# Absolute path to model file
-# model_fn = os.path.join(os.path.abspath(os.path.dirname(__file__)), model_fn)
-
-# Create model
-net = FFDNet(num_input_channels=in_ch)
-# Load saved weights
-if useGPU:
-    state_dict = torch.load(model_fn)
-    device_ids = [0]
-    model = torch.nn.DataParallel(net, device_ids=device_ids).cuda()
-else:
-    state_dict = torch.load(model_fn, map_location='cpu')
-    # CPU mode: remove the DataParallel wrapper
-    state_dict = remove_dataparallel_wrapper(state_dict)
-    model = net
-model.load_state_dict(state_dict)
-model.eval()  # evaluation mode
 
 data_list = ['aerial32', 'crash32', 'kobe', 'traffic']
 for data_id in range(len(data_list)):

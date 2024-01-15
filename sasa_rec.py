@@ -4,9 +4,6 @@ import skimage
 import numpy as np
 from skimage.restoration import (denoise_tv_chambolle, denoise_bilateral,
                                  denoise_wavelet, estimate_sigma)
-# from packages.vnlnet.test import vnlnet
-from packages.ffdnet.test_ffdnet_ipol import ffdnet_vdenoiser
-from packages.fastdvdnet.test_fastdvdnet import fastdvdnet_denoiser
 from utils import (A_, At_, psnr)
 if skimage.__version__ < '0.18':
     from skimage.measure import (compare_psnr, compare_ssim)
