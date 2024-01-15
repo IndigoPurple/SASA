@@ -38,13 +38,6 @@ Cite our paper if you find it interesting!
   year={2024}
 }
 
-@article{zhao2023sasa,
-  title={{SASA}: saliency-aware self-adaptive snapshot compressive imaging},
-  author={Zhao, Yaping and Lam, Edmund Y},
-  journal={arXiv preprint arXiv:2401.00875},
-  year={2023}
-}
-
 @article{zhao2022mathematical,
   title={Mathematical Cookbook for Snapshot Compressive Imaging},
   author={Zhao, Yaping},
