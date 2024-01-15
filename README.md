@@ -1,6 +1,6 @@
 # SASA: Saliency-Aware Self-Adaptive Snapshot Compressive Imaging (ICASSP'2024)
 In this repository we provide code of the paper:
-> **Deep equilibrium models for video snapshot compressive imaging**
+> **SASA: Saliency-Aware Self-Adaptive Snapshot Compressive Imaging**
 > 
 > Yaping Zhao, Edmund Y. Lam
 > 
