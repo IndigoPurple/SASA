@@ -7,7 +7,7 @@ In this repository we provide code of the paper:
 > arxiv link: https://arxiv.org/abs/2401.00875
 
 <p align="center">
-<img src="img/teaser.png">
+<img src="img/sasa_text.gif">
 </p>
 
 ## Requirements
